@@ -56,4 +56,21 @@ export const Container = styled.div`
       color: black;
     }
   }
+
+  @media (max-width: 500px) {
+    & {
+      flex-direction: column;
+    }
+
+    .navigation {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .button-sign-in {
+      margin-left: 0;
+      margin-top: 1rem;
+      align-self: flex-start;
+    }
+  }
 `;
