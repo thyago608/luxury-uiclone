@@ -1,11 +1,14 @@
-import { Container, Main, Section } from "./styles";
+import { Container, Main, Section, PhotoContainer } from "./styles";
 import { Header } from "../../components/Header";
+import image from "../../assets/image.jpg";
 
 const SectionText = () => {
   return (
     <Section>
       <header>
-        <h1>Feel luxurious, with{"\n"}OLuxury</h1>
+        <h1>
+          Feel luxurious, with <span>Luxury</span>
+        </h1>
       </header>
 
       <p>
@@ -19,11 +22,20 @@ const SectionText = () => {
         quae.
       </p>
 
-      <div>
-        <input type="email" placeholder="email" />
+      <div className="container-input-button">
+        <input type="email" placeholder="your@email.com" />
         <button type="button">Subscrible</button>
       </div>
     </Section>
+  );
+};
+
+const SectionPhoto = () => {
+  return (
+    <PhotoContainer>
+      <div className="photo-shadow"></div>
+      <img src={image} alt="" />
+    </PhotoContainer>
   );
 };
 
@@ -34,6 +46,7 @@ export function Dashboard() {
         <Header />
         <Main>
           <SectionText />
+          <SectionPhoto />
         </Main>
       </div>
     </Container>
