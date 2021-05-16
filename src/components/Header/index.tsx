@@ -3,12 +3,12 @@ import { Container } from "./styles";
 export function Header() {
   return (
     <Container>
-      <h1>
+      <h1 className="logo">
         <span>O</span>
         luxury
       </h1>
 
-      <nav>
+      <nav className="navigation">
         <ul>
           <li>
             <a href="#">My Plans</a>
@@ -18,6 +18,8 @@ export function Header() {
           </li>
         </ul>
       </nav>
+
+      <button className="button-sign-in">Sign In</button>
     </Container>
   );
 }
